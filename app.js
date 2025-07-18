@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2');
 
@@ -7,17 +6,15 @@ const session = require('express-session');
 
 const flash = require('connect-flash');
 
-const port = process.env.PORT || 3000;
-
 const app = express();
 
 // Database connection
 const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    host: 'ggylkx.h.filess.io',
+    port: 3307,
+    user: 'C237DB_medicinebe',
+    password: '0ea8dba3a37ad4ef8615d1fba50a4d2be4abf25c',
+    database: 'C237DB_medicinebe'
 });
 
 db.connect((err) => {
